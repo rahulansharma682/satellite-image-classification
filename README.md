@@ -2,10 +2,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 
-A comprehensive deep learning project for classifying satellite imagery into land use categories using transfer learning and state-of-the-art computer vision models.
+A deep learning project for classifying satellite imagery into land use categories using transfer learning and state-of-the-art computer vision models.
 
 ## 📋 Table of Contents
 
@@ -17,8 +16,6 @@ A comprehensive deep learning project for classifying satellite imagery into lan
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Visualizations](#visualizations)
-- [Future Improvements](#future-improvements)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ## 🎯 Overview
@@ -29,17 +26,6 @@ This project demonstrates multi-class image classification on the **EuroSAT data
 - **Advanced Data Augmentation** techniques for satellite imagery
 - **Model Interpretability** using Grad-CAM visualizations
 - **Comprehensive Evaluation** with detailed metrics and analysis
-- **Interactive Demo** with Gradio interface
-
-### Key Features
-
-✅ Automatic dataset download and preprocessing
-✅ Multiple model architecture comparison
-✅ Advanced data augmentation pipeline
-✅ Grad-CAM visualizations for model interpretability
-✅ High-resolution result exports
-✅ Interactive web demo
-✅ Comprehensive documentation
 
 ## 🏆 Results
 
@@ -230,15 +216,6 @@ classes = ['AnnualCrop', 'Forest', 'HerbaceousVegetation', 'Highway',
 print(f"Predicted class: {classes[prediction]}")
 ```
 
-### Interactive Demo
-
-```python
-import gradio as gr
-
-# Launch Gradio interface
-demo.launch(share=True)
-```
-
 ## 📁 Project Structure
 
 ```
@@ -306,47 +283,6 @@ satellite-image-classification/
   - **Forest**: Identifies vegetation texture
   - **Water Bodies**: Recognizes water surfaces
 
-## 🔮 Future Improvements
-
-### Model Enhancements
-- [ ] Test larger models (EfficientNet-B3/B4, Vision Transformer)
-- [ ] Implement ensemble methods combining multiple architectures
-- [ ] Experiment with advanced augmentation (MixUp, CutMix, AutoAugment)
-- [ ] Fine-tune more layers with longer training schedules
-
-### Technical Additions
-- [ ] Add cross-validation for robust performance estimation
-- [ ] Implement test-time augmentation (TTA)
-- [ ] Use weighted loss for handling class imbalance
-- [ ] Add experiment tracking with Weights & Biases or MLflow
-
-### Deployment
-- [ ] Create REST API with FastAPI
-- [ ] Deploy on cloud platforms (AWS, GCP, Azure)
-- [ ] Build mobile app for on-device inference
-- [ ] Implement batch processing pipeline for large-scale analysis
-
-### Applications
-- [ ] Real-time satellite feed processing
-- [ ] Change detection over time series
-- [ ] Integration with GIS systems
-- [ ] Multi-temporal analysis
-
-## 🌍 Real-World Applications
-
-This project demonstrates techniques applicable to:
-
-- **Urban Planning**: Monitor city development and expansion
-- **Agriculture**: Crop type identification and health monitoring
-- **Environmental Conservation**: Track deforestation and land use changes
-- **Disaster Response**: Assess damage from natural disasters
-- **Infrastructure Planning**: Plan roads, utilities, and public services
-- **Climate Research**: Monitor environmental changes over time
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **EuroSAT Dataset**: [Helber et al., 2019](https://arxiv.org/abs/1709.00029)
@@ -355,14 +291,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Grad-CAM**: [Selvaraju et al., 2017](https://arxiv.org/abs/1610.02391)
 - **Google Colab**: For providing free GPU resources
 
-## 📧 Contact
-
-For questions, suggestions, or collaboration opportunities, feel free to reach out!
-
----
-
-**⭐ If you found this project helpful, please consider giving it a star!**
-
----
-
-*Built with ❤️ using PyTorch and Google Colab*
