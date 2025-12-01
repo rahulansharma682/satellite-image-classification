@@ -1,0 +1,109 @@
+
+SATELLITE IMAGE CLASSIFICATION - PROJECT REPORT
+================================================================================
+
+Generated: 2025-12-01 19:12:59
+
+PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+Dataset: EuroSAT (Sentinel-2 Satellite Images)
+Total Images: 27000
+Number of Classes: 10
+Image Size: 64x64 pixels (resized to 224x224 for training)
+
+DATASET SPLIT
+--------------------------------------------------------------------------------
+Training samples: 18900 (70.0%)
+Validation samples: 4050 (15.0%)
+Test samples: 4050 (15.0%)
+
+CLASSES
+--------------------------------------------------------------------------------
+ 1. AnnualCrop                -  3000 images
+ 2. Forest                    -  3000 images
+ 3. HerbaceousVegetation      -  3000 images
+ 4. Highway                   -  2500 images
+ 5. Industrial                -  2500 images
+ 6. Pasture                   -  2000 images
+ 7. PermanentCrop             -  2500 images
+ 8. Residential               -  3000 images
+ 9. River                     -  2500 images
+10. SeaLake                   -  3000 images
+
+
+MODEL ARCHITECTURES TRAINED
+--------------------------------------------------------------------------------
+1. ResNet-50 (25.6M parameters)
+2. EfficientNet-B0 (5.3M parameters)
+
+TRAINING CONFIGURATION
+--------------------------------------------------------------------------------
+Optimizer: Adam
+Learning Rate: 0.0001
+Scheduler: ReduceLROnPlateau
+Epochs: 10
+Batch Size: 32
+Data Augmentation:
+  - Random Horizontal/Vertical Flip
+  - Random Rotation (±30°)
+  - Color Jitter
+  - Random Affine Transform
+
+RESULTS
+================================================================================
+
+ResNet-50 Performance:
+--------------------------------------------------------------------------------
+Best Validation Accuracy: 98.40%
+Final Training Accuracy: 99.39%
+Final Validation Accuracy: 98.40%
+
+EfficientNet-B0 Performance:
+--------------------------------------------------------------------------------
+Best Validation Accuracy: 98.12%
+Final Training Accuracy: 99.52%
+Final Validation Accuracy: 98.12%
+
+Test Set Performance (Best Model):
+--------------------------------------------------------------------------------
+Test Accuracy: 97.83%
+Weighted F1-Score: 0.9782
+
+DETAILED CLASSIFICATION REPORT
+================================================================================
+                      precision    recall  f1-score   support
+
+          AnnualCrop       0.97      0.99      0.98       472
+              Forest       0.99      0.99      0.99       442
+HerbaceousVegetation       0.95      0.99      0.97       458
+             Highway       0.98      0.98      0.98       391
+          Industrial       0.98      0.98      0.98       378
+             Pasture       0.97      0.96      0.97       299
+       PermanentCrop       0.98      0.93      0.95       379
+         Residential       0.99      0.99      0.99       450
+               River       0.98      0.97      0.98       375
+             SeaLake       0.99      0.99      0.99       406
+
+            accuracy                           0.98      4050
+           macro avg       0.98      0.98      0.98      4050
+        weighted avg       0.98      0.98      0.98      4050
+
+
+FILES GENERATED
+--------------------------------------------------------------------------------
+Models:
+  - best_model.pth (Best performing model weights)
+
+Visualizations:
+  - class_distribution.png
+  - sample_images.png
+  - training_history.png
+  - confusion_matrix.png
+  - gradcam_sample_1.png through gradcam_sample_5.png
+
+Data:
+  - model_results.json (Detailed metrics)
+  - project_summary.txt (This report)
+
+================================================================================
+End of Report
